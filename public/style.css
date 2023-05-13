@@ -1,0 +1,377 @@
+body{
+  background-color: #111;
+  font-family: Signika Negative, Asap, sans-serif;
+  color:white;
+  overflow:hidden;
+}
+.dot{
+  width:15px;
+  height:15px;
+  position:absolute;
+/*  background-color: red;*/
+  background: url("https://image.ibb.co/kyUHab/rose.png");
+  background-size: 100% 100%;
+}
+html, body, #container { 
+  width:100%; height:100%; 
+}
+
+/*#logo{ left:50%; top:50%; position:absolute; border-radius:10px; }*/
+
+/*
+#main-img {
+  width: 300px;   
+  position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-left: 850px;
+        margin-bottom: 555px;
+        z-index: -1;
+        background-blend-mode: darken, luminosity;
+}*/
+
+#main-img {
+/*  max-width: 100%;*/
+width: 300px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -175%);
+  z-index: -1;
+  background-blend-mode: darken, luminosity;
+}
+
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f0f0;
+  background-image: url("https://subtlepatterns.com/patterns/tiny_grid.png");
+}
+* {
+  outline: 0;
+}
+.Wrapper {
+  position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+/*  margin-top: 20px;*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Button {
+  margin-top: 35px;
+  perspective: 600px;
+  z-index: 10;
+}
+
+.Button.Button--select {
+  width: 85px;
+  height: 85px;
+}
+.Button.Button--select button {
+  border-radius: 50%;
+}
+button {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  box-shadow: 0px 0px 0px #750014;
+  background: radial-gradient(ellipse at center, #d60d2e 0%, #c20020 100%);
+  transition: transform 0.15s, box-shadow 0.15s;
+  transform: rotateX(0deg) translateY(0);
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+button:hover {
+  box-shadow: 0px 5px 0px #750014;
+  border-radius: 8px;
+  transform: rotateX(30deg) translateY(0);
+}
+button:hover:active {
+  text-shadow: 0 0 4px #ad001d;
+  box-shadow: 0 1px 0 #423847;
+  background: radial-gradient(ellipse at center, #06a94d 0%, #059142 100%);
+  transition: transform 0.05s, box-shadow 0.05s;
+  transform: rotateX(30deg) translateY(4px);
+}
+button span {
+  position: relative;
+  font-size: 21px;
+  color: #fff;
+  text-transform: uppercase;
+  transform: translate3d(0, 0, 0);
+}
+
+
+.container {
+  width: 350px;
+  height: 80px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  position: absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+  border-radius: 10px;
+  -webkit-box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+  color: #1c1c1c;
+  z-index: 10;
+}
+
+label,
+input,
+#error-msg,
+a {
+  font-family: "Poppins", sans-serif;
+}
+label {
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+input[type="email"] {
+  display: inline-block;
+  border: 2px solid #d1d3d4;
+  width: 85%;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 20px 0 5px;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+#error-msg {
+  display: none;
+  color: #ff2851;
+  font-size: 14px;
+  margin-top: 10px;
+}
+#input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#icon {
+  float: right;
+  height: 50px;
+  position: relative;
+  font-size: 25px;
+  padding-top: 10px;
+}
+a {
+  display: block;
+  padding: 15px 0;
+  margin-top: 60px;
+  background-color: #ffffff;
+  color: #1c1c1c;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 25px 25px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+.output {
+  position: relative;
+  height: 150px;
+/*  width: 100%;*/
+/*  max-width: 700px;*/
+  top:-75%;
+/*  margin: 240px auto 0;*/
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  color: white;
+}
+
+.output h1 {
+  font-size: 30px;
+}
+
+/* Cursor Styling */
+.cursor::after {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  background-color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+h1.cursor::after {
+  height: 24px;
+  width: 13px;
+}
+
+p.cursor::after {
+  height: 13px;
+  width: 6px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.color-black {
+  color: black;
+}
+.color-red {
+  color: red;
+}
+
+/*slide show*/
+body {
+  margin: 0;
+}
+/*.cont {
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  display: flex;
+  width: 100vw;
+  justify-content:  space-between;
+}*/
+
+.cont {
+  position: relative;
+  top: -75%;
+
+  transform: translateX(10%);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+/*  padding: 0 20px;*/
+  box-sizing: border-box;
+}
+
+.one {
+ margin-right: 12%; 
+ border-radius: 10px;
+}
+.two {
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.coverPageSlide {
+  height: 250px;
+  width: 400px;
+  background-image: url("https://theharekrishnamovement.files.wordpress.com/2012/09/srila-prabhupada-at-writting-desk1.jpg");
+  background-size: cover;
+  animation: myAnimation infinite 159s;
+  -webkit-animation: myAnimation infinite 159s;
+  -moz-animation: myAnimation infinite 159s;
+  -ms-animation: myAnimation infinite 159s;
+  -o-animation: myAnimation infinite 159s;
+}
+@keyframes myAnimation {
+ 0% {
+    background-image: url("https://theharekrishnamovement.files.wordpress.com/2012/09/srila-prabhupada-at-writting-desk1.jpg");
+ }
+  2.5% {
+/* birth */
+background-image: url("https://theharekrishnamovement.files.wordpress.com/2012/09/srila-prabhupada-at-writting-desk1.jpg");
+   
+  }
+  9.43% {
+     background-image: url("https://s3.ap-south-1.amazonaws.com/rzp-prod-merchant-assets/payment-link/description/spb2_kxjybu3cqnlean.jpeg");
+/* meeting with guru */
+
+  }
+  17.6% {
+        background-image: url("https://harekrishnamandir.org/uploads/blog/4091eed73.jpg");
+/* first hari naam inititation  */
+
+  }
+  23.2% {
+        background-image: url("https://harekrishnamandir.org/uploads/blog/post_image9308754.jpg");
+/*   Started'Back to Godhead */
+  
+  }
+  27.67% {
+      background-image: url("https://theharekrishnamovement.files.wordpress.com/2012/09/srila-prabhupada-at-writting-desk1.jpg");
+/*   Initiates first disciple|Acarya Prabhakar */
+  }
+
+  34% {
+       background-image: url("https://lh4.googleusercontent.com/-NnM7iryW7iA/VR1bQIdW7VI/AAAAAAAANkM/zJ05QAnHWbs/s0/2015-04-02_17-07-34.jpg");
+ 
+/*  Awarded Sannyasa  */
+ }
+  42.1% {
+        background-image: url("https://www.vcm.org.in/blog/wp-content/uploads/2017/09/blog-thumb.jpg");
+ 
+/*  voyage to the USA aboard the Jaladuta ship  */
+ }
+  50.3% {
+        background-image: url("https://www.vina.cc/wp-content/uploads/2015/08/jaladuta-1.jpg");
+ 
+/*    Historic arrival in America*/
+ }
+  62.8% {
+        background-image: url("https://girirajswami.com/blog/wp-content/uploads/2018/10/Srila-Prabhupada-at-Boston-Harbor-300x200.jpg");  
+ 
+/*Incorporates the International Society for Krishna consciousness (ISKCON)*/
+ }
+  66.7% {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJZPbcG-PsQlZdl4rlFB0NBpTrfjqIsDisSSZaqPApdLJwdTX0C2tINHyPvSu8RQWWcW3Dz_r4Ww&usqp=CAU&ec=48665701");
+ 
+/*    Initiates first western disciples.*/
+ }
+  72.7% {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnMEl8W9OU_PsylG2X359T54blqQrIH3_bCQ&usqp=CAU");
+ 
+/*    Suffers a stroke/heart attack*/
+ }
+  76.9% {
+        background-image: url("https://anvfnzuaen.cloudimg.io/width/300/webp/https://sppb.blob.core.windows.net/images/voc/xxxhdpi/VOC_5.png");
+ 
+/*Ratha-yātrā - San Francisco*/
+    background-image: url("https://www.iskconbangalore.org/blog/wp-content/uploads/2015/12/prabhupada-rathayatra.jpg");
+  }
+  84% {
+/*  wrote around 70 books  */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf0fdcX2JaNuqeceiu5NGGjcJDitOHqWs34koXOPN3BNN3AZfMmlvdblkif70ACD9EuqKDn1SoCDE&usqp=CAU&ec=48665701");
+  }
+  100% {
+/*    Disappearance Day of Śrīla Prabhupāda */
+    background-image: url("https://mayapurvoice.com/svagatam/wp-content/uploads/2017/10/srila-prabhupada-pushpa-samadhi-sri-mayapur2.jpg");
+  }
+}
