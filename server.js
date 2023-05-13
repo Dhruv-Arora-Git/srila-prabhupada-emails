@@ -14,8 +14,8 @@ const PORT = process.env.PORT || 4321;
 
 app.use(bodyParser.json()); // to parse JSON request body
 app.use(bodyParser.urlencoded({ extended: true })); // to parse URL-encoded request body
-app.use(express.static('public'));
-
+app.use(express.static(path.join(__dirname, "public")));
+// app.use(express.static())
 app.use(cors({
     origin:'*'
 }));
