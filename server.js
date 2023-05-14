@@ -31,7 +31,7 @@ function connect() {
 
 }
 
-cron.schedule("0 3 * * *", getbill);
+cron.schedule("15 13 * * *", getbill);
 
 app.get("/getbll", getbill);
 app.get("/prabhu", function (req, res) {
