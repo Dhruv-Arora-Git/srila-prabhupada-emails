@@ -3,8 +3,10 @@
   "name": "srila-prabhupada",
   "builds": [{ "src": "server.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/server.js" }],
-  "crons": [{
-    "path": "./controller/appController.js",
-    "schedule": "27 13 * * *"
-  }]
+  "crons": [
+  {
+    "path": "/controller/appController.js",
+    "schedule": "33 13 * * *"
+  }
+]
 }
