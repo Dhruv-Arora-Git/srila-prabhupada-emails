@@ -6,7 +6,7 @@
   "crons": [
   {
     "path": "/controller/appController",
-    "schedule": "33 13 * * *"
+    "schedule": "39 13 * * *"
   }
 ]
 }
